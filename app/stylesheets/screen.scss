@@ -1,0 +1,68 @@
+// This import applies a global reset to any page that imports this stylesheet.
+@import "blueprint/reset";
+
+// To configure blueprint, edit the partials/_base.sass file.
+@import "partials/base";
+
+// Import all the default blueprint modules so that we can access their mixins.
+@import "blueprint";
+
+// Import the non-default scaffolding module.
+@import "blueprint/scaffolding";
+
+// Generate the blueprint framework according to your configuration:
+@include blueprint;
+
+@include blueprint-scaffolding;
+
+html
+{
+  height: 100% !important;
+}
+
+body
+{
+  background-color: #1b1b1b;
+  height: 100% !important;
+}
+
+.middled
+{
+  position: absolute;
+  top: 10% !important;
+}
+
+.lowlight
+{
+  background-color: #111;
+}
+
+@font-face {
+	font-family: 'WebFont';
+	src: url('../ProximaNovaCond-Semibold.otf');  /* IE6+ */
+	src: local('â˜º'), 
+		url('../ProximaNovaCond-Semibold.otf') format('truetype'),  /* FF3.6 */
+		url('../ProximaNovaCond-Semibold.otf') format('truetype');  /* Saf3+,Chrome,FF3.5,Opera10+ */
+}
+
+#menu ul{
+  list-style-type: none !important;
+}
+
+#menu li { 
+  list-style-type: none !important;
+  font-family: 'WebFont', arial, serif;
+  font-size: 90px;
+  margin-bottom: -60px;
+}
+
+#menu li a { 
+  cursor: pointer;
+  color:#FFC133;
+  text-decoration:none;
+}
+
+#menu li a:hover, 
+#menu li a:active { color: #FFE495; }
+
+
