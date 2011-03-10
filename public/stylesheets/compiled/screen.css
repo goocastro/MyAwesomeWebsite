@@ -1492,7 +1492,7 @@ body {
 /* line 30, ../../../app/stylesheets/screen.scss */
 .middled {
   position: absolute;
-  top: 10% !important;
+  top: 15% !important;
 }
 
 /* line 36, ../../../app/stylesheets/screen.scss */
@@ -1532,4 +1532,10 @@ body {
 #menu li a:hover,
 #menu li a:active {
   color: #FFE495;
+}
+
+/* line 69, ../../../app/stylesheets/screen.scss */
+#instagram {
+  width: 300px;
+  width: 300px;
 }
