@@ -15,26 +15,20 @@
 
 @include blueprint-scaffolding;
 
-html
-{
-  height: 100% !important;
-}
-
 body
 {
-  background-color: #1b1b1b;
-  height: 100% !important;
-}
-
-.middled
-{
-  position: absolute;
-  top: 15% !important;
+  background-color: #111;
 }
 
 .lowlight
 {
   background-color: #111;
+  padding-top:50px;
+  padding-bottom:50px;
+  position:absolute;
+  top:50%;
+  margin-top:-320px !important;
+
 }
 
 @font-face {
@@ -52,8 +46,9 @@ body
 #menu li { 
   list-style-type: none !important;
   font-family: 'WebFont', arial, serif;
-  font-size: 90px;
-  margin-bottom: -60px;
+  font-size: 105px;
+  margin-bottom: -75px;
+  margin-left: 25px;
 }
 
 #menu li a { 
@@ -63,10 +58,15 @@ body
 }
 
 #menu li a:hover, 
-#menu li a:active { color: #FFE495; }
+#menu li a:active { text-decoration: line-through; }
 
-#instagram
+.instagram
 {
-  width: 300px;
-  width: 300px;
+  margin-top: 15px !important;
+}
+
+.wrapper
+{
+  position:absolute !important;
+  height:100% !important;
 }
