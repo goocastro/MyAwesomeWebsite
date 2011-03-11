@@ -1428,8 +1428,7 @@ body {
 /* line 24, ../../../app/stylesheets/screen.scss */
 .lowlight {
   background-color: #111;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 30px;
   position: absolute;
   top: 50%;
   margin-top: -320px !important;
@@ -1443,12 +1442,12 @@ body {
   /* Saf3+,Chrome,FF3.5,Opera10+ */
 }
 
-/* line 42, ../../../app/stylesheets/screen.scss */
+/* line 41, ../../../app/stylesheets/screen.scss */
 #menu ul {
   list-style-type: none !important;
 }
 
-/* line 46, ../../../app/stylesheets/screen.scss */
+/* line 45, ../../../app/stylesheets/screen.scss */
 #menu li {
   list-style-type: none !important;
   font-family: 'WebFont', arial, serif;
@@ -1457,31 +1456,31 @@ body {
   margin-left: 25px;
 }
 
-/* line 54, ../../../app/stylesheets/screen.scss */
+/* line 53, ../../../app/stylesheets/screen.scss */
 #menu li a {
   cursor: pointer;
   color: #FFC133;
   text-decoration: none;
 }
 
-/* line 61, ../../../app/stylesheets/screen.scss */
+/* line 60, ../../../app/stylesheets/screen.scss */
 #menu li a:hover,
 #menu li a:active {
   text-decoration: line-through;
 }
 
-/* line 64, ../../../app/stylesheets/screen.scss */
+/* line 63, ../../../app/stylesheets/screen.scss */
 .instagram {
   margin-top: 15px !important;
 }
 
-/* line 69, ../../../app/stylesheets/screen.scss */
+/* line 68, ../../../app/stylesheets/screen.scss */
 .instagram img {
   width: 545px;
   height: 545px;
 }
 
-/* line 75, ../../../app/stylesheets/screen.scss */
+/* line 74, ../../../app/stylesheets/screen.scss */
 .wrapper {
   position: absolute !important;
   height: 100% !important;
