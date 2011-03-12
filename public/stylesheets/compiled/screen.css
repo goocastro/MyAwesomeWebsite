@@ -1472,15 +1472,16 @@ body {
 /* line 63, ../../../app/stylesheets/screen.scss */
 .instagram {
   margin-top: 15px !important;
+  cursor: pointer;
 }
 
-/* line 68, ../../../app/stylesheets/screen.scss */
+/* line 69, ../../../app/stylesheets/screen.scss */
 .instagram img {
   width: 545px;
   height: 545px;
 }
 
-/* line 74, ../../../app/stylesheets/screen.scss */
+/* line 75, ../../../app/stylesheets/screen.scss */
 .wrapper {
   position: absolute !important;
   height: 100% !important;
