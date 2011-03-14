@@ -6,6 +6,8 @@
     = javascript_include_tag "jquery-1.4.4.min.js", "jquery-ui-1.8.8.custom.min.js", "jquery.rails.js", "application"
     = javascript_include_tag 'Groject.ImageSwitch.yui.js'
     = csrf_meta_tag
+    /[if lt IE 8]
+      = stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection'
 
     %title Gustavo Castro
     %meta{ :NAME => 'Description', :CONTENT => 'Gustavo Castro - Programmer' }
