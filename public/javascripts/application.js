@@ -3,29 +3,37 @@
 //
 //
 var ImgIdx = 2;
+function rollIt () {  
+    if(!$(this).ImageAnimating()){
+      $(this).ImageSwitch({ Type:"FadeIn",
+                            NewImage:document.getElementById('instapic').getAttribute('picture' + ImgIdx),
+                            StartLeft: 150,
+                            Speed: 500
+                          });
+    }
+
+    ImgIdx++;
+    if(ImgIdx>7) ImgIdx = 1;
+    return false;  
+  }
 
 $(function () {  
-  $('#instapic').click(function () {  
-	if(!$(this).ImageAnimating()){
-		$(this).ImageSwitch({	Type:"FadeIn",
-								NewImage:this.getAttribute('picture' + ImgIdx),
-                                StartLeft: 150,
-								Speed: 500
-								});
-	}
-	ImgIdx++;
-	if(ImgIdx>7) ImgIdx = 1;
-    return false;  
-  })  
+  $('#instapic').click(rollIt)  
 });  
 
 
 $(function () {  
-	$.ImagePreload(this.getElementById('instapic').getAttribute('picture1'));
-	$.ImagePreload(this.getElementById('instapic').getAttribute('picture2'));
-	$.ImagePreload(this.getElementById('instapic').getAttribute('picture3'));
-	$.ImagePreload(this.getElementById('instapic').getAttribute('picture4'));
-	$.ImagePreload(this.getElementById('instapic').getAttribute('picture5'));
-	$.ImagePreload(this.getElementById('instapic').getAttribute('picture6'));
-	$.ImagePreload(this.getElementById('instapic').getAttribute('picture7'));
+  $.ImagePreload(this.getElementById('instapic').getAttribute('picture1'));
+  $.ImagePreload(this.getElementById('instapic').getAttribute('picture2'));
+  $.ImagePreload(this.getElementById('instapic').getAttribute('picture3'));
+  $.ImagePreload(this.getElementById('instapic').getAttribute('picture4'));
+  $.ImagePreload(this.getElementById('instapic').getAttribute('picture5'));
+  $.ImagePreload(this.getElementById('instapic').getAttribute('picture6'));
+  $.ImagePreload(this.getElementById('instapic').getAttribute('picture7'));
+
+  setInterval(function () {
+    // body...
+  }
+    
+  , 3000);
 });  
