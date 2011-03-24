@@ -26,5 +26,13 @@
           :target => '_blank' } mail
 
 .span-13.instagram.last
-  %img{ :src => "/images/nietzsche.png", :align => "right"}
-  
+  %ul#slideshow
+    %li
+      %img{ :src => "/images/nietzsche.png"}
+    %li
+      %img{ :src => "/images/nietzsche2.png"}
+    %li
+      %img{ :src => "/images/nietzsche3.png"}
+
+:javascript
+  $('#slideshow').scsSlideshow( legend = false, delayBetweenImage = 5000 );
