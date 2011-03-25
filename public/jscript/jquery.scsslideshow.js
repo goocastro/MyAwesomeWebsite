@@ -17,10 +17,10 @@ $.fn.scsSlideshow = function(options)
 	// --
 	var prefix = 'scsSlideshow_';
 	var defaults = {  
-			delayBetweenImage: 5000,
+			delayBetweenImage: 6000,
 			delayTransition: 800,
 			legend: false,
-			legendHeight: 0,
+			legendHeight: 100,
 			slideshowWidth: 500,
 			slideshowHeight: 500
 		};

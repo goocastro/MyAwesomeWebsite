@@ -32,4 +32,13 @@
         %img{ :src => image.images.standard_resolution.url }
 
 :javascript
-  $('#slideshow').scsSlideshow( legend = false, delayBetweenImage = 5000 );
+  $('#slideshow').scsSlideshow();
+  
+  $(function() {
+    $('#menu li a').hover(function(){
+      $(this).animate({'paddingLeft':'10px'},100);
+    }, function(){
+      $(this).animate({'paddingLeft':'0px'},100);
+    });
+  });
+
