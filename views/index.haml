@@ -27,12 +27,9 @@
 
 .span-13.instagram.last
   %ul#slideshow
-    %li
-      %img{ :src => "/images/nietzsche.png"}
-    %li
-      %img{ :src => "/images/nietzsche2.png"}
-    %li
-      %img{ :src => "/images/nietzsche3.png"}
+    - for image in @images
+      %li
+        %img{ :src => image.images.standard_resolution.url }
 
 :javascript
   $('#slideshow').scsSlideshow( legend = false, delayBetweenImage = 5000 );
