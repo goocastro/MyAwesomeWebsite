@@ -15,7 +15,7 @@
 html {margin:0;padding:0;border:0;}
 body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
 article, aside, dialog, figure, footer, header, hgroup, nav, section {display:block;}
-body {line-height:1.5;background:#111;}
+body {line-height:1.5;background:#000;}
 table {border-collapse:separate;border-spacing:0;}
 caption, th, td {text-align:left;font-weight:normal;float:none !important;}
 table, th, td {vertical-align:middle;}
@@ -266,6 +266,12 @@ hr.space {background:#fff;color:#fff;visibility:hidden;}
 
 
 // ****************************************
+
+body
+{
+  //background: url("../images/background.png") repeat scroll 0 0 transparent;
+}
+
 .main-box
 {
   position:absolute;
@@ -283,10 +289,10 @@ hr.space {background:#fff;color:#fff;visibility:hidden;}
 
 @font-face {
 	font-family: 'WebFont';
-	src: url('../fonts/ProximaNovaCond-Semibold.otf');  /* IE6+ */
+	src: url('../fonts/pnb.otf');  /* IE6+ */
 	src: local('â˜º'), 
-		url('../fonts/ProximaNovaCond-Semibold.otf') format('truetype'),  /* FF3.6 */
-		url('../fonts/ProximaNovaCond-Semibold.otf') format('truetype');  /* Saf3+,Chrome,FF3.5,Opera10+ */
+		url('../fonts/pnb.otf') format('truetype'),  /* FF3.6 */
+		url('../fonts/pnb.otf') format('truetype');  /* Saf3+,Chrome,FF3.5,Opera10+ */
 }
 
 #menu
@@ -300,6 +306,7 @@ hr.space {background:#fff;color:#fff;visibility:hidden;}
   font-size: 105px;
   margin-bottom: -80px;
   margin-left: 5px;
+  text-shadow: 3px 3px 4px #000;
 }
 
 #menu li a { 
