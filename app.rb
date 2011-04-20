@@ -12,13 +12,6 @@ get '/screen.css' do
   scss :screen
 end
 
-no_configure do 
-  enable :logging, :dump_errors, :raise_errors
-  log = File.new("sinatra.log", "a")
-  STDOUT.reopen(log)
-  STDERR.reopen(log)
-end
-
 # get instagram array
 def instArray
   cache_filename = 'instagram_cache.yaml'
