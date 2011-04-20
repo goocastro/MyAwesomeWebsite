@@ -12,7 +12,7 @@ get '/screen.css' do
   scss :screen
 end
 
-configure do 
+no_configure do 
   enable :logging, :dump_errors, :raise_errors
   log = File.new("sinatra.log", "a")
   STDOUT.reopen(log)
