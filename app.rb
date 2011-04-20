@@ -3,11 +3,8 @@ require 'sinatra'
 require 'haml'    #must be loaded after sinatra
 require 'instagram'
 
-
 get '/' do
-  client = Instagram.client(:access_token => "895827.f59def8.68edfeb4b2d94ca59b90ecde732e7eff")
-  @images = client.user_recent_media
-
+  @images = instArray()
   haml :index
 end
 
@@ -15,3 +12,32 @@ get '/screen.css' do
   scss :screen
 end
 
+configure do 
+  enable :logging, :dump_errors, :raise_errors
+  log = File.new("sinatra.log", "a")
+  STDOUT.reopen(log)
+  STDERR.reopen(log)
+end
+
+# get instagram array
+def instArray
+  cache_filename = 'instagram_cache.yaml'
+  pic_list = []
+
+  puts File.ctime( cache_filename ) - Time.now
+
+  if File.ctime( cache_filename ) - Time.now < -60
+    puts "=> getting data from from api"
+    client = Instagram.client(:access_token => "895827.f59def8.68edfeb4b2d94ca59b90ecde732e7eff")
+    pic_list = client.user_recent_media
+
+    File.open( cache_filename , "w+" ) do |out|
+      out << pic_list.to_yaml
+    end
+  else
+    puts "=> getting data from file"
+    pic_list = YAML.load(File.open( cache_filename )) 
+  end
+
+  return pic_list
+end
