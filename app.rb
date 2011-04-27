@@ -14,7 +14,7 @@ end
 
 # get instagram array
 def instArray
-  cache_filename = 'instagram_cache.yaml'
+  cache_filename = 'tmp/instagram_cache.yaml'
   pic_list = []
 
   puts File.ctime( cache_filename ) - Time.now
