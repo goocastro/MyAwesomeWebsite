@@ -2,6 +2,9 @@ require 'rubygems'
 require 'sinatra'
 require 'haml'    #must be loaded after sinatra
 require 'instagram'
+require 'json'
+require 'yaml'
+
 
 get '/' do
   @images = instArray()
@@ -36,3 +39,4 @@ def instArray
 
   return pic_list
 end
+
