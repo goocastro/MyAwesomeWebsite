@@ -26,8 +26,13 @@ def instArray
 
   if File.ctime( cache_filename ) - Time.now < -60 || File.size( cache_filename ) < 5
     puts "=> getting data from from api"
-    client = Instagram.client(:access_token => "895827.f59def8.68edfeb4b2d94ca59b90ecde732e7eff")
-    pic_list = client.user_recent_media
+    begin
+    	client = Instagram.client(:access_token => "895827.f59def8.68edfeb4b2d94ca59b90ecde732e7eff")
+    rescue
+	pic_list = []
+    ensure
+    	pic_list = client.user_recent_media
+    end
 
     File.open( cache_filename , "w+" ) do |out|
       out << pic_list.to_yaml
