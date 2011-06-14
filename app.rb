@@ -5,6 +5,8 @@ require 'instagram'
 require 'json'
 require 'yaml'
 
+#inserting comment
+
 
 get '/' do
   @images = instArray()
