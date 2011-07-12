@@ -32,6 +32,9 @@
       %li
         %img{ :src => image.images.standard_resolution.url }
 
+- @images = nil
+- GC.start
+
 :javascript
   $('#slideshow').scsSlideshow();
   
