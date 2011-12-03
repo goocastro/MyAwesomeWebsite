@@ -1,12 +1,11 @@
 require 'rubygems'
 require 'sinatra'
-require 'haml'    #must be loaded after sinatra
+require 'haml'
 require 'instagram'
 require 'json'
 require 'yaml'
 
 #inserting comment
-
 
 get '/' do
   @images = instArray()
@@ -29,11 +28,11 @@ def instArray
   if File.ctime( cache_filename ) - Time.now < -60 || File.size( cache_filename ) < 5
     puts "=> getting data from from api"
     begin
-    	client = Instagram.client(:access_token => "895827.f59def8.68edfeb4b2d94ca59b90ecde732e7eff")
+      client = Instagram.client(:access_token => "895827.f59def8.68edfeb4b2d94ca59b90ecde732e7eff")
     rescue
-	pic_list = []
+      pic_list = []
     ensure
-    	pic_list = client.user_recent_media
+      pic_list = client.user_recent_media
     end
 
     File.open( cache_filename , "w+" ) do |out|
@@ -41,7 +40,7 @@ def instArray
     end
   else
     puts "=> getting data from file"
-    pic_list = YAML.load(File.open( cache_filename )) 
+    pic_list = YAML.load(File.open( cache_filename ))
   end
 
   return pic_list
