@@ -885,7 +885,7 @@
       id: '931606'
       full_name: Ana Paula Brandino
     - username: jufalconi
-      profile_picture: http://images.instagram.com/profiles/profile_620646_75sq_1310928469.jpg
+      profile_picture: http://images.instagram.com/profiles/profile_620646_75sq_1322877969.jpg
       id: '620646'
       full_name: Juliana Falconi
     - username: marimilk
@@ -1252,7 +1252,7 @@
       id: '3379626'
       full_name: Sabrina Cano
     - username: jufalconi
-      profile_picture: http://images.instagram.com/profiles/profile_620646_75sq_1310928469.jpg
+      profile_picture: http://images.instagram.com/profiles/profile_620646_75sq_1322877969.jpg
       id: '620646'
       full_name: Juliana Falconi
   images:
@@ -1332,9 +1332,9 @@
 - tags: []
   type: image
   location:
-    latitude: -23.5811566
+    latitude: -23.581014
     name: B 4 Lounge
-    longitude: -46.6830745
+    longitude: -46.683008
     id: 3338158
   comments:
     count: 0

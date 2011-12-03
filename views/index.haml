@@ -1,9 +1,9 @@
 .span16
   - for image in @images
     .row
-      .span1
+      .span2
         &nbsp;
-      .span3
+      .span2
         .wella
           %h2
             -post_date = DateTime.parse(Time.at(image.created_time.to_i).to_s)

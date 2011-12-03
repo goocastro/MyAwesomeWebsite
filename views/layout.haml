@@ -10,27 +10,28 @@
   %body
     .topbar
       .topbar-inner(data-scrollspy="scrollspy")
-        .container
+        .container.social-icons
           .pull-right
             %ul.nav
               %li
-                %a#menu-twitter(href="#") Twitter
+                %a#menu-twitter(href="#")
+                  %img(src="/images/icon_tw.png")
               %li
-                %a#menu-facebook(href="#") Facebook
+                %a#menu-facebook(href="#")
+                  %img(src="/images/icon_fb.png")
               %li
-                %a#menu-last-fm(href="#") Last.fm
-              %li
-                %a#menu-linkedin(href="#") LinkedIn
-              %li
-                %a#menu-work(href="#") Work
-              %li
-                %a#menu-mail(href="#") Mail
+                %a#menu-linkedin(href="#")
+                  %img(src="/images/icon_in.png")
+                %li
+                  %a#menu-work(href="#") Work
+                %li
+                  %a#menu-mail(href="#") Contact
     .container
       = yield
     :javascript
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
       document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-
+    :javascript
       var pageTracker = _gat._getTracker("UA-3763789-2");
       pageTracker._initData();
       pageTracker._trackPageview();
