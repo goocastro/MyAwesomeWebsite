@@ -1,21 +1,51 @@
-:ruby
-  size = 800
-  count = 1
-  column =2
-  column_count = 0
+.span-11
+  %ul#menu 
+    %li
+      %a{ :onclick => "javascript:pageTracker._trackPageview('outbound/twitter.com')",
+          :href => 'http://twitter.com/gustavocastro', 
+          :target => '_blank' } twitter
+    %li 
+      %a{ :onclick => "javascript:pageTracker._trackPageview('outbound/facebook.com')",
+          :href => 'http://facebook.com/goocastro', 
+          :target => '_blank' } facebook
+    %li 
+      %a{ :onclick => "javascript:pageTracker._trackPageview('outbound/last.fm')",
+          :href => 'http://www.last.fm/user/goocastro', 
+          :target => '_blank' } last.fm
+    %li 
+      %a{ :onclick => "javascript:pageTracker._trackPageview('outbound/lilnkedin.com')",
+          :href => 'http://www.linkedin.com/in/gustavolcastro', 
+          :target => '_blank' } linkedin
+    %li 
+      %a{ :onclick => "javascript:pageTracker._trackPageview('outbound/theauberginepanda.com')", 
+          :href => 'http://theauberginepanda.com', 
+          :target => '_blank' } work
+    %li 
+      %a{ :onclick => "javascript:pageTracker._trackPageview('outbound/mail')", 
+          :href => 'mailto:contact@gustavocastro.com', 
+          :target => '_blank' } mail
 
-.span-11.pics
+#instapics
   - for image in @images
-    - if count==column
-      - column*=2
-      - column_count += 1
-    - count+=1
-    .pic_container{:style => "float:left; margin:2px; width:#{size/column-column_count}px;"}
-      %img{ :src => image.images.standard_resolution.url, 
-            :style => "width:#{size/column - column_count*2}px; height:#{size/column - column_count*2}px; " }
+    -if image['caption']
+      %img(src="#{image['images']['standard_resolution']['url']}" alt="#{image['caption']['text']}" data-caption="#caption#{image['caption']['id']}")
+    -else
+      %img(src="#{image['images']['standard_resolution']['url']}")
+- for image in @images
+  -if image['caption']
+    %span.orbit-caption(id="caption#{image['caption']['id']}")
+      = image['caption']['text']
 
 - @images = nil
 - GC.start
 
 :javascript
-
+  $(window).load(function() {
+    $('#instapics').orbit({
+      animation: 'fade',
+      timer: false,
+      captions: true,
+      captionAnimation: 'fade',
+      bullets: true
+    });
+  });

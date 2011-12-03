@@ -7,7 +7,6 @@ require 'yaml'
 
 #inserting comment
 
-
 get '/' do
   @images = instArray()
   haml :index
@@ -31,7 +30,7 @@ def instArray
     begin
     	client = Instagram.client(:access_token => "895827.f59def8.68edfeb4b2d94ca59b90ecde732e7eff")
     rescue
-	pic_list = []
+      pic_list = []
     ensure
     	pic_list = client.user_recent_media
     end

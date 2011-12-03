@@ -1,31 +1,41 @@
-!!!
-!!! XML
-!!! Strict
-%html{ :xmlns => "http://www.w3.org/1999/xhtml", :lang => "en", 'xml:lang' => "en" }
+!!! 5
+/ paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en">
+/[if IE 7] <html class="no-js lt-ie9 lt-ie8" lang="en">
+/[if IE 8] <html class="no-js lt-ie9" lang="en">
+/ [if gt IE 8]><!
+%html{:lang => "en"}
+  / <![endif]
   %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width", :name => "viewport"}/
     %title Gustavo Castro
-    %meta{'http-equiv'=>"Content-Type", :content=>"text/html; charset=iso-8859-1"}/
-    %meta{'http-equiv'=>"Content-Language", :content=>"en-us"}/
-    %meta{ :NAME => 'Description', :CONTENT => 'Gustavo Castro - Programmer' }
-    %link{:href=>"/screen.css", :media=>"screen", :rel=>"stylesheet", :type=>"text/css"}/
+    %link{:href => "stylesheets/foundation.css", :rel => "stylesheet"}
+    %link{:href => "stylesheets/app.css", :rel => "stylesheet"}/
+    %meta{:name => 'Description', :content => 'Gustavo Castro - Programmer' }
+    /[if lt IE 9]
+      %link{:href => "stylesheets/ie.css", :rel => "stylesheet"}/
+    /[if lt IE 9]
+      %script{:src => "http://html5shiv.googlecode.com/svn/trunk/html5.js"}
     %script{:type => 'text/javascript', :src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js'}
-    %script{:type => 'text/javascript', :src => '/jscript/jquery.scsslideshow.js'}
 
   %body
     .container
-      .span-24.wrapper
-        .span-24.main-box
+      .row
+        .twelve.columns
+          %h2 The Title
+          %p The subtitle gose here;
+          %hr
           = yield
 
-
-    <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <script type="text/javascript">
-    var pageTracker = _gat._getTracker("UA-3763789-2");
-    pageTracker._initData();
-    pageTracker._trackPageview();
-    </script>
+    :javascript
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    :javascript
+      var pageTracker = _gat._getTracker("UA-3763789-2");
+      pageTracker._initData();
+      pageTracker._trackPageview();
+    %script{:src => "javascripts/foundation.js"}
+    %script{:src => "javascripts/app.js"}
     
 
