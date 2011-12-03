@@ -1,38 +1,28 @@
-.span-11
-  %ul#menu 
-    %li
-      %a{ :onclick => "javascript:pageTracker._trackPageview('outbound/twitter.com')",
-          :href => 'http://twitter.com/gustavocastro', 
-          :target => '_blank' } twitter
-    %li 
-      %a{ :onclick => "javascript:pageTracker._trackPageview('outbound/facebook.com')",
-          :href => 'http://facebook.com/goocastro', 
-          :target => '_blank' } facebook
-    %li 
-      %a{ :onclick => "javascript:pageTracker._trackPageview('outbound/last.fm')",
-          :href => 'http://www.last.fm/user/goocastro', 
-          :target => '_blank' } last.fm
-    %li 
-      %a{ :onclick => "javascript:pageTracker._trackPageview('outbound/lilnkedin.com')",
-          :href => 'http://www.linkedin.com/in/gustavolcastro', 
-          :target => '_blank' } linkedin
-    %li 
-      %a{ :onclick => "javascript:pageTracker._trackPageview('outbound/theauberginepanda.com')", 
-          :href => 'http://theauberginepanda.com', 
-          :target => '_blank' } work
-    %li 
-      %a{ :onclick => "javascript:pageTracker._trackPageview('outbound/mail')", 
-          :href => 'mailto:contact@gustavocastro.com', 
-          :target => '_blank' } mail
-
 .span16
   - for image in @images
     .row
       .span3
-        &nbsp;
+        .well
+          %h2
+            -post_date = DateTime.parse(Time.at(image.created_time.to_i).to_s)
+            ="#{post_date.mday}/#{post_date.mon}"
+          %p
+            %strong
+              Likes
+            %br/
+            - for like in image.likes.data
+              %img.profile-picture(src="#{like.profile_picture}")
+          %p
+            - for comment in image.comments.data
+              %strong
+                ="#{comment.from.username}: "
+              %br/
+              =comment.text
+              %br/
       .span13
-        %img(src="/images/test.jpg")
-        =#%img{ :src => image.images.standard_resolution.url }
+        =#%img(src="/images/test.jpg")
+        %img.instagram-pic{ :src => image.images.standard_resolution.url }
+    .sep
 
 - @images = nil
 - GC.start

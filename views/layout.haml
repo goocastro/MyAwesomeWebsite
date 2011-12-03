@@ -16,16 +16,23 @@
           .pull-right
             %ul.nav
               %li
-                %a(href="#") Twitter
+                %a#menu-twitter(href="#") Twitter
               %li
-                %a(href="#") Facebook
+                %a#menu-facebook(href="#") Facebook
               %li
-                %a(href="#") Last.fm
+                %a#menu-last-fm(href="#") Last.fm
               %li
-                %a(href="#") LinkedIn
+                %a#menu-linkedin(href="#") LinkedIn
               %li
-                %a(href="#") Work
+                %a#menu-work(href="#") Work
               %li
-                %a(href="#") Mail
+                %a#menu-mail(href="#") Mail
     .container
       = yield
+    :javascript
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+      var pageTracker = _gat._getTracker("UA-3763789-2");
+      pageTracker._initData();
+      pageTracker._trackPageview();

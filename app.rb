@@ -24,7 +24,8 @@ def instArray
     File.open( cache_filename , 'w') {|f| f.write('') }
   end
 
-  if File.ctime( cache_filename ) - Time.now < -60 || File.size( cache_filename ) < 5
+  if true
+  #if File.ctime( cache_filename ) - Time.now < -60 || File.size( cache_filename ) < 5
     puts "=> getting data from from api"
     begin
       client = Instagram.client(:access_token => "895827.f59def8.68edfeb4b2d94ca59b90ecde732e7eff")
