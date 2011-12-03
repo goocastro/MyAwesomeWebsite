@@ -1,31 +1,29 @@
-!!!
-!!! XML
-!!! Strict
+!!! 5
 %html{ :xmlns => "http://www.w3.org/1999/xhtml", :lang => "en", 'xml:lang' => "en" }
   %head
-    %title Gustavo Castro
-    %meta{'http-equiv'=>"Content-Type", :content=>"text/html; charset=iso-8859-1"}/
-    %meta{'http-equiv'=>"Content-Language", :content=>"en-us"}/
-    %meta{ :NAME => 'Description', :CONTENT => 'Gustavo Castro - Programmer' }
-    %link{:href=>"/screen.css", :media=>"screen", :rel=>"stylesheet", :type=>"text/css"}/
-    %script{:type => 'text/javascript', :src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js'}
-    %script{:type => 'text/javascript', :src => '/jscript/jquery.scsslideshow.js'}
+    %title The Aubergine Panda
+    %link{:href => "/less/bootstrap.less", :media => "all", :rel => "stylesheet/less"}/
+    %script{:src => "/js/less-1.1.3.min.js", :type => "text/javascript"}
 
   %body
+    .topbar
+      .topbar-inner(data-scrollspy="scrollspy")
+        .container
+          %a.brand(href="#")
+            Site name
+          .pull-right
+            %ul.nav
+              %li
+                %a(href="#") Twitter
+              %li
+                %a(href="#") Facebook
+              %li
+                %a(href="#") Last.fm
+              %li
+                %a(href="#") LinkedIn
+              %li
+                %a(href="#") Work
+              %li
+                %a(href="#") Mail
     .container
-      .span-24.wrapper
-        .span-24.main-box
-          = yield
-
-
-    <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <script type="text/javascript">
-    var pageTracker = _gat._getTracker("UA-3763789-2");
-    pageTracker._initData();
-    pageTracker._trackPageview();
-    </script>
-    
-
+      = yield

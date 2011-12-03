@@ -12,10 +12,6 @@ get '/' do
   haml :index
 end
 
-get '/screen.css' do
-  scss :screen
-end
-
 # get instagram array
 def instArray
   cache_filename = 'tmp/instagram_cache.yaml'

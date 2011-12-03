@@ -25,23 +25,14 @@
           :href => 'mailto:contact@gustavocastro.com', 
           :target => '_blank' } mail
 
-.span-13.instagram.last
-  %ul#slideshow
-    - for image in @images
-      %li
-        %img{ :src => image.images.standard_resolution.url }
+.span16
+  - for image in @images
+    .row
+      .span3
+        &nbsp;
+      .span13
+        %img(src="/images/test.jpg")
+        =#%img{ :src => image.images.standard_resolution.url }
 
 - @images = nil
 - GC.start
-
-:javascript
-  $('#slideshow').scsSlideshow();
-  
-  $(function() {
-    $('#menu li a').hover(function(){
-      $(this).animate({'paddingLeft':'10px'},100);
-    }, function(){
-      $(this).animate({'paddingLeft':'0px'},100);
-    });
-  });
-
