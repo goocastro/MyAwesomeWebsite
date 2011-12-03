@@ -1,8 +1,10 @@
 .span16
   - for image in @images
     .row
+      .span1
+        &nbsp;
       .span3
-        .well
+        .wella
           %h2
             -post_date = DateTime.parse(Time.at(image.created_time.to_i).to_s)
             ="#{post_date.mday}/#{post_date.mon}"
@@ -12,14 +14,14 @@
             %br/
             - for like in image.likes.data
               %img.profile-picture(src="#{like.profile_picture}")
-          %p
-            - for comment in image.comments.data
-              %strong
-                ="#{comment.from.username}: "
-              %br/
-              =comment.text
-              %br/
-      .span13
+          -# %p
+          -#   - for comment in image.comments.data
+          -#     %strong
+          -#       ="#{comment.from.username}: "
+          -#     %br/
+          -#     =comment.text
+          -#     %br/
+      .span12
         =#%img(src="/images/test.jpg")
         %img.instagram-pic{ :src => image.images.standard_resolution.url }
     .sep
