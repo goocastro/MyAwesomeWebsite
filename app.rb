@@ -4,12 +4,15 @@ require 'haml'
 require 'instagram'
 require 'json'
 require 'yaml'
-
-#inserting comment
+require 'coffee-script'
 
 get '/' do
   @images = instArray()
   haml :index
+end
+
+get '/app.js' do
+  coffee :app
 end
 
 # get instagram array
