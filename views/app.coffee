@@ -31,3 +31,11 @@ $ ->
     live:true
     offset:5
   )
+
+  preload = (imgs) ->
+    $(imgs).each ->
+      $('<img/>')[0].src = this
+
+  preload ['/images/icon_tw_over.png',
+    '/images/icon_fb_over.png',
+    '/images/icon_in_over.png']
