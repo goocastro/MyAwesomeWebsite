@@ -1,33 +1,8 @@
 .row
   .span16
     &nbsp;
-.span16
-  - for image in @images
-    .row
-      .span2
-        &nbsp;
-      .span2
-        .wella
-          %h2
-            -post_date = DateTime.parse(Time.at(image.created_time.to_i).to_s)
-            ="#{post_date.mday}/#{post_date.mon}"
-          %p
-            %strong
-              Likes
-            %br/
-            - for like in image.likes.data
-              %img.profile-picture(src="#{like.profile_picture}" data-original-title="#{like.username}")
-          -# %p
-          -#   - for comment in image.comments.data
-          -#     %strong
-          -#       ="#{comment.from.username}: "
-          -#     %br/
-          -#     =comment.text
-          -#     %br/
-      .span12
-        =#%img(src="/images/test.jpg")
-        %img.instagram-pic{ :src => image.images.standard_resolution.url }
-    .sep
+.span16#main
+  =haml(:_list, :layout => false)
 
 - @images = nil
 - GC.start

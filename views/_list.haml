@@ -1,0 +1,24 @@
+-count = 0
+- for image in @images
+  -if count >= @offset
+    .row
+      .span2
+        &nbsp;
+      .span2
+        .wella
+          %h2
+            -post_date = DateTime.parse(Time.at(image.created_time.to_i).to_s)
+            ="#{post_date.mday}/#{post_date.mon}"
+          %p
+            %strong
+              Likes
+            %br/
+            - for like in image.likes.data
+              %img.profile-picture(src="#{like.profile_picture}" data-original-title="#{like.username}")
+      .span12
+        =#%img(src="/images/test.jpg")
+        %img.instagram-pic{ :src => image.images.standard_resolution.url }
+    .sep
+  -count+=1
+  -if count-@offset >= 10
+    -break

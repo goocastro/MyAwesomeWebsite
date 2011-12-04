@@ -6,13 +6,26 @@ require 'json'
 require 'yaml'
 require 'coffee-script'
 
+images = []
+offset = 0
+
 get '/' do
-  @images = instArray()
+  images = instArray()
+  @images = images
+  offset = 0
+  @offset = offset
   haml :index
 end
 
 get '/app.js' do
   coffee :app
+end
+
+get '/more' do
+  offset += 10
+  @images = images
+  @offset = offset
+  haml :_list, :layout => false
 end
 
 # get instagram array
@@ -32,7 +45,7 @@ def instArray
     rescue
       pic_list = []
     ensure
-      pic_list = client.user_recent_media
+      pic_list = client.user_recent_media(:count => 300)
     end
 
     File.open( cache_filename , "w+" ) do |out|
