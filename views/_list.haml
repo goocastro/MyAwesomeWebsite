@@ -9,12 +9,13 @@
           %h2
             -post_date = DateTime.parse(Time.at(image.created_time.to_i).to_s)
             ="#{post_date.mday}/#{post_date.mon}"
-          %p
-            %strong
-              Likes
-            %br/
-            - for like in image.likes.data
-              %img.profile-picture(src="#{like.profile_picture}" data-original-title="#{like.username}")
+          -if image.likes.data.length != 0
+            %p
+              %strong
+                Likes
+              %br/
+              - for like in image.likes.data
+                %img.profile-picture(src="#{like.profile_picture}" data-original-title="#{like.username}")
       .span12
         =#%img(src="/images/test.jpg")
         %img.instagram-pic{ :src => image.images.standard_resolution.url }
