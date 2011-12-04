@@ -12,13 +12,11 @@ $ ->
     pageTracker._trackPageview('outbound/theauberginepanda')
     window.open("http://www.theauberginepanda.com", "_blank")
 
-
   $(document).scroll ->
     if $(document).height() - ($(window).scrollTop() + $(window).height()) <= 0
       $.get('/more', (data) ->
         $("#main").append(data)
       )
-
 
   over = ->
     path = $("> img", this).attr 'src'
