@@ -2334,9 +2334,9 @@
 - tags: []
   type: image
   location:
-    latitude: -23.689912
+    latitude: -23.690040963863147
     name: São Bernardo do Campo
-    longitude: -46.562943
+    longitude: -46.563199
     id: 1354985
   comments:
     count: 0

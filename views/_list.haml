@@ -1,4 +1,5 @@
 -count = 0
+-tweet_count = 0
 - for image in @images
   -if count >= @offset
     .row
@@ -20,6 +21,13 @@
         =#%img(src="/images/test.jpg")
         %img.instagram-pic{ :src => image.images.standard_resolution.url }
     .sep
+    -if DateTime.parse(@tweets[tweet_count]['created_at']) < DateTime.parse(Time.at(image.created_time.to_i).to_s)
+      .row
+        .span16
+          =@tweets[tweet_count]['text']
+          %br/
+          = DateTime.parse(@tweets[tweet_count]['created_at']).to_s + "<br/>" + DateTime.parse(Time.at(image.created_time.to_i).to_s).to_s
+      -tweet_count += 1
   -count+=1
   -if count-@offset >= 10
     -break

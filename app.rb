@@ -8,6 +8,7 @@ require 'coffee-script'
 require 'net/http'
 
 images = []
+tweets = []
 offset = 0
 
 get '/' do
@@ -15,7 +16,8 @@ get '/' do
   @images = images
   offset = 0
   @offset = offset
-  @tweets = getTweets()
+  tweets = getTweets()
+  @tweets = tweets
   haml :index
 end
 
@@ -26,6 +28,7 @@ end
 get '/more' do
   offset += 10
   @images = images
+  @tweets = tweets
   @offset = offset
   haml :_list, :layout => false
 end
@@ -67,10 +70,7 @@ end
 ##### get twitter array
 ############################################
 def getTweets
-  lala = ''
-  #http://twitter.com/statuses/user_timeline.json
   uri = URI('http://api.twitter.com/1/statuses/user_timeline.json?screen_name=gustavocastro&count=10')
   response = Net::HTTP.get(uri)
   json_response = JSON.parse(response)
-
 end
