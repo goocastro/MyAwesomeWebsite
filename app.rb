@@ -5,15 +5,17 @@ require 'instagram'
 require 'json'
 require 'yaml'
 require 'coffee-script'
+require 'net/http'
 
 images = []
 offset = 0
 
 get '/' do
-  images = instArray()
+  images = getInstagrams()
   @images = images
   offset = 0
   @offset = offset
+  @tweets = getTweets()
   haml :index
 end
 
@@ -28,8 +30,10 @@ get '/more' do
   haml :_list, :layout => false
 end
 
-# get instagram array
-def instArray
+############################################
+##### get instagram array
+############################################
+def getInstagrams
   cache_filename = 'tmp/instagram_cache.yaml'
   pic_list = []
 
@@ -59,3 +63,14 @@ def instArray
   return pic_list
 end
 
+############################################
+##### get twitter array
+############################################
+def getTweets
+  lala = ''
+  #http://twitter.com/statuses/user_timeline.json
+  uri = URI('http://api.twitter.com/1/statuses/user_timeline.json?screen_name=gustavocastro&count=10')
+  response = Net::HTTP.get(uri)
+  json_response = JSON.parse(response)
+
+end
