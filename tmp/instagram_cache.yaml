@@ -1,6 +1,231 @@
 ---
 - tags: []
   type: image
+  location:
+    latitude: -23.611666
+    name: Pão de Açúcar Real Parque
+    longitude: -46.701184
+    id: 3294774
+  comments:
+    count: 2
+    data:
+    - created_time: '1323258933'
+      text: Nerd!
+      from:
+        username: felipedcastro
+        profile_picture: http://images.instagram.com/profiles/profile_939238_75sq_1293921560.jpg
+        id: '939238'
+        full_name: Felipe de Castro
+      id: '504734683'
+    - created_time: '1323277796'
+      text: Nerd! rsrs
+      from:
+        username: victormasi
+        profile_picture: http://images.instagram.com/profiles/profile_4595467_75sq_1306948010.jpg
+        id: '4595467'
+        full_name: Victor Masi
+      id: '505471278'
+  filter: Earlybird
+  created_time: '1323221880'
+  link: http://instagr.am/p/Xu_e-/
+  likes:
+    count: 2
+    data:
+    - username: pbrandino
+      profile_picture: http://images.instagram.com/profiles/profile_931606_75sq_1320716109.jpg
+      id: '931606'
+      full_name: Ana Paula Brandino
+    - username: victormasi
+      profile_picture: http://images.instagram.com/profiles/profile_4595467_75sq_1306948010.jpg
+      id: '4595467'
+      full_name: Victor Masi
+  images:
+    low_resolution:
+      url: http://distilleryimage2.instagram.com/1915c260207411e1abb01231381b65e3_6.jpg
+      width: 306
+      height: 306
+    thumbnail:
+      url: http://distilleryimage2.instagram.com/1915c260207411e1abb01231381b65e3_5.jpg
+      width: 150
+      height: 150
+    standard_resolution:
+      url: http://distilleryimage2.instagram.com/1915c260207411e1abb01231381b65e3_7.jpg
+      width: 612
+      height: 612
+  caption:
+    created_time: '1323221902'
+    text: o resto é ruby?
+    from:
+      username: gustavocastro
+      profile_picture: http://images.instagram.com/profiles/profile_895827_75sq_1291388442.jpg
+      id: '895827'
+      full_name: Gustavo Castro
+    id: '503251018'
+  user_has_liked: false
+  id: '398194622_895827'
+  user:
+    username: gustavocastro
+    website: http://gustavocastro.com
+    bio: ''
+    profile_picture: http://images.instagram.com/profiles/profile_895827_75sq_1291388442.jpg
+    full_name: Gustavo Castro
+    id: '895827'
+- tags: []
+  type: image
+  location: !!null 
+  comments:
+    count: 1
+    data:
+    - created_time: '1323217992'
+      text: De gravata, q chique!
+      from:
+        username: jufalconi
+        profile_picture: http://images.instagram.com/profiles/profile_620646_75sq_1322877969.jpg
+        id: '620646'
+        full_name: Juliana Falconi
+      id: '503041343'
+  filter: Sutro
+  created_time: '1323123481'
+  link: http://instagr.am/p/Xjd-N/
+  likes:
+    count: 7
+    data:
+    - username: doidadojipe
+      profile_picture: http://images.instagram.com/profiles/profile_898147_75sq_1291341460.jpg
+      id: '898147'
+      full_name: doidadojipe
+    - username: calimano
+      profile_picture: http://images.instagram.com/profiles/profile_735056_75sq_1291546430.jpg
+      id: '735056'
+      full_name: Alexandre Caliman
+    - username: gomalina
+      profile_picture: http://images.instagram.com/profiles/profile_3507427_75sq_1305085079.jpg
+      id: '3507427'
+      full_name: Fábio Gomes
+    - username: victormasi
+      profile_picture: http://images.instagram.com/profiles/profile_4595467_75sq_1306948010.jpg
+      id: '4595467'
+      full_name: Victor Masi
+    - username: felipedcastro
+      profile_picture: http://images.instagram.com/profiles/profile_939238_75sq_1293921560.jpg
+      id: '939238'
+      full_name: Felipe de Castro
+    - username: fabiovieira
+      profile_picture: http://images.instagram.com/profiles/profile_7219058_75sq_1311875737.jpg
+      id: '7219058'
+      full_name: Fábio Vieira
+    - username: jufalconi
+      profile_picture: http://images.instagram.com/profiles/profile_620646_75sq_1322877969.jpg
+      id: '620646'
+      full_name: Juliana Falconi
+  images:
+    low_resolution:
+      url: http://distilleryimage9.instagram.com/fea333da1f8e11e19e4a12313813ffc0_6.jpg
+      width: 306
+      height: 306
+    thumbnail:
+      url: http://distilleryimage9.instagram.com/fea333da1f8e11e19e4a12313813ffc0_5.jpg
+      width: 150
+      height: 150
+    standard_resolution:
+      url: http://distilleryimage9.instagram.com/fea333da1f8e11e19e4a12313813ffc0_7.jpg
+      width: 612
+      height: 612
+  caption: !!null 
+  user_has_liked: false
+  id: '395173773_895827'
+  user:
+    username: gustavocastro
+    website: http://gustavocastro.com
+    bio: ''
+    profile_picture: http://images.instagram.com/profiles/profile_895827_75sq_1291388442.jpg
+    full_name: Gustavo Castro
+    id: '895827'
+- tags: []
+  type: image
+  location:
+    latitude: -23.621632
+    name: The Aubergine Panda Headquarter
+    longitude: -46.687165
+    id: 331383
+  comments:
+    count: 0
+    data: []
+  filter: Brannan
+  created_time: '1323040282'
+  link: http://instagr.am/p/XZTGL/
+  likes:
+    count: 9
+    data:
+    - username: bobrunelli
+      profile_picture: http://images.instagram.com/profiles/profile_729429_75sq_1314933679.jpg
+      id: '729429'
+      full_name: Bruno Brunelli
+    - username: sabrinacano
+      profile_picture: http://images.instagram.com/profiles/profile_3379626_75sq_1309484735.jpg
+      id: '3379626'
+      full_name: Sabrina Cano
+    - username: calimano
+      profile_picture: http://images.instagram.com/profiles/profile_735056_75sq_1291546430.jpg
+      id: '735056'
+      full_name: Alexandre Caliman
+    - username: clarissaluz
+      profile_picture: http://images.instagram.com/profiles/anonymousUser.jpg
+      id: '5141759'
+      full_name: clarissaluz
+    - username: doidadojipe
+      profile_picture: http://images.instagram.com/profiles/profile_898147_75sq_1291341460.jpg
+      id: '898147'
+      full_name: doidadojipe
+    - username: victormasi
+      profile_picture: http://images.instagram.com/profiles/profile_4595467_75sq_1306948010.jpg
+      id: '4595467'
+      full_name: Victor Masi
+    - username: lifiladelfo
+      profile_picture: http://images.instagram.com/profiles/profile_1623562_75sq_1301022104.jpg
+      id: '1623562'
+      full_name: lifiladelfo
+    - username: felipedcastro
+      profile_picture: http://images.instagram.com/profiles/profile_939238_75sq_1293921560.jpg
+      id: '939238'
+      full_name: Felipe de Castro
+    - username: jufalconi
+      profile_picture: http://images.instagram.com/profiles/profile_620646_75sq_1322877969.jpg
+      id: '620646'
+      full_name: Juliana Falconi
+  images:
+    low_resolution:
+      url: http://distilleryimage3.instagram.com/47ffc84e1ecd11e19e4a12313813ffc0_6.jpg
+      width: 306
+      height: 306
+    thumbnail:
+      url: http://distilleryimage3.instagram.com/47ffc84e1ecd11e19e4a12313813ffc0_5.jpg
+      width: 150
+      height: 150
+    standard_resolution:
+      url: http://distilleryimage3.instagram.com/47ffc84e1ecd11e19e4a12313813ffc0_7.jpg
+      width: 612
+      height: 612
+  caption:
+    created_time: '1323040308'
+    text: Ultimos dias de aperto!
+    from:
+      username: gustavocastro
+      profile_picture: http://images.instagram.com/profiles/profile_895827_75sq_1291388442.jpg
+      id: '895827'
+      full_name: Gustavo Castro
+    id: '495420730'
+  user_has_liked: false
+  id: '392507787_895827'
+  user:
+    username: gustavocastro
+    website: http://gustavocastro.com
+    bio: ''
+    profile_picture: http://images.instagram.com/profiles/profile_895827_75sq_1291388442.jpg
+    full_name: Gustavo Castro
+    id: '895827'
+- tags: []
+  type: image
   location: !!null 
   comments:
     count: 0
@@ -3889,6 +4114,7 @@
     profile_picture: http://images.instagram.com/profiles/profile_895827_75sq_1291388442.jpg
     full_name: Gustavo Castro
     id: '895827'
+<<<<<<< HEAD
 - tags: []
   type: image
   location: !!null 
@@ -3949,3 +4175,5 @@
     profile_picture: http://images.instagram.com/profiles/profile_895827_75sq_1291388442.jpg
     full_name: Gustavo Castro
     id: '895827'
+=======
+>>>>>>> footer
