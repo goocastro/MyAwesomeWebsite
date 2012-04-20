@@ -15,7 +15,7 @@
                 Likes
               %br/
               - for like in image.likes.data
-                %img.profile-picture(src="#{like.profile_picture}" data-original-title="#{like.username}")
+                %img.profile-picture(src="#{like.profile_picture}" data-original-title="#{like.username}" alt="#{like.username}")
       .span12
         =#%img(src="/images/test.jpg")
         %img.instagram-pic{ :src => image.images.standard_resolution.url }
