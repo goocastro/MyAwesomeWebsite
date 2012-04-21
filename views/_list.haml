@@ -18,7 +18,7 @@
                 %img.profile-picture(src="#{like.profile_picture}" data-original-title="#{like.username}" alt="#{like.username}")
       .span12
         =#%img(src="/images/test.jpg")
-        %img.instagram-pic{ :src => image.images.standard_resolution.url, :alt => image.caption.text }
+        %img.instagram-pic{ :src => image.images.standard_resolution.url, :alt => image.caption.nil? ? "" : image.caption.text }
     .sep
   -count+=1
   -if count-@offset >= 10
