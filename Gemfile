@@ -1,7 +1,7 @@
 source :rubygems
 
 gem 'sinatra'
-gem 'therubyracer-heroku', :group => :production
+gem 'therubyracer-heroku'
 gem 'haml'
 gem 'instagram'
 gem 'json'
