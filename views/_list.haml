@@ -11,9 +11,8 @@
             ="#{post_date.mday}/#{post_date.mon}"
           -if image.likes.data.length != 0
             %p
-              %strong(style="margin-bottom:5px;")
+              %p(style="margin-bottom:5px;")
                 Likes
-              %br/
               - for like in image.likes.data
                 %img.profile-picture(src="#{like.profile_picture}" data-original-title="#{like.username}" alt="#{like.username}")
       .span12
