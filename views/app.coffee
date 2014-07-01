@@ -16,6 +16,7 @@ $ ->
     if $(document).height() - ($(window).scrollTop() + $(window).height()) <= 0
       $.get('/more', (data) ->
         $("#main").append(data)
+        pageTracker._trackPageview()
       )
 
   over = ->
