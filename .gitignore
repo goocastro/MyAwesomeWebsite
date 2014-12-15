@@ -4,3 +4,4 @@ log/*.log
 vendor/**/*
 .rbenv-version
 config/
+tmp/instagram_cache*

@@ -32,15 +32,19 @@ end
 ##### get instagram array
 ############################################
 def getInstagrams(maxid = '')
-  cache_filename = 'tmp/instagram_cache.yaml'
+  if maxid == ''
+    cache_filename = 'tmp/instagram_cache.yaml'
+  else
+    cache_filename = "tmp/instagram_cache_#{maxid}.yaml"
+  end
   pic_list = []
 
   if !File.exist?(cache_filename.to_s)
     File.open( cache_filename , 'w') {|f| f.write('') }
   end
 
-  if true
-  #if File.ctime( cache_filename ) - Time.now < -1 || File.size( cache_filename ) < 5
+  #if true
+  if File.ctime( cache_filename ) - Time.now < -30 || File.size( cache_filename ) < 5
     puts "=> getting data from from api"
     url = "https://api.instagram.com/v1/users/895827/media/recent/?client_id=195fdfcae4844c3b8553e894236f5ada&count=20&max_id=" + maxid
     p url
