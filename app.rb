@@ -40,8 +40,8 @@ def getInstagrams
     File.open( cache_filename , 'w') {|f| f.write('') }
   end
 
-  if true
-  #if File.ctime( cache_filename ) - Time.now < -60 || File.size( cache_filename ) < 5
+  #if true
+  if File.ctime( cache_filename ) - Time.now < -90 || File.size( cache_filename ) < 5
     puts "=> getting data from from api"
     begin
       client = Instagram.client(:access_token => ENV['AT'])
