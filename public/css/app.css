@@ -21,3 +21,7 @@ a.icon img {
 .top-bar-section li:not(.has-form) a:not(.button) {
   padding: 6px 0.65rem;
 }
+
+.pic {
+  margin-bottom: 20px;
+}
