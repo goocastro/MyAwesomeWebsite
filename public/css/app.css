@@ -45,11 +45,26 @@ a.icon img {
   width: 100%;
   height: 100%;
   color: #FFF;
-  display: inline;
   background: rgba(0, 0, 0, .6);
 }
 
 .pic:hover .overlay {
-  display: block;
   background: rgba(0, 0, 0, .6);
+}
+
+.pic .overlay .info {
+  position: relative;
+  height: 50px;
+  width: 75%;
+  top: 50%;
+  margin: -25px auto 0 auto;
+  text-align: center;
+}
+
+.pic .overlay .info p {
+  margin-bottom: 0;
+}
+
+.pic .overlay .info i {
+  margin-right: 15px;
 }
