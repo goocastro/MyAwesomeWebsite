@@ -16,9 +16,12 @@
       .overlay
         .info
           %p 
-            13 
-            %i.fi-heart
-            13 
-            %i.fi-comment
+            - if image['likes']['count'] > 0
+              = image['likes']['count']
+              %i.fi-heart
+            - if image['comments']['count'] > 0
+              = image['comments']['count']
+              %i.fi-comment
           %p.desc
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            - if image['caption']
+              = image['caption']['text']
