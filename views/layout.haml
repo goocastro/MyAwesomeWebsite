@@ -21,19 +21,13 @@
           %a{:href => "#"}
             %span Menu
       %section.top-bar-section
-        %ul.right
-          %li
-            %a#menu-twitter.icon(href="#")
-              %img(src="/images/icon_tw_out.png")
-          %li
-            %a#menu-facebook.icon(href="#")
-              %img(src="/images/icon_fb_out.png")
-          %li
-            %a#menu-linkedin.icon(href="#")
-              %img(src="/images/icon_in_out.png")
-          %li
-            %a#menu-email.icon(href="#")
-              %img(src="/images/icon_em_out.png")
+        %ul.right.icon-menu
+          %li#menu-facebook
+            %i.fi-social-facebook
+          %li#menu-linkedin
+            %i.fi-social-linkedin
+          %li#menu-twitter
+            %i.fi-social-twitter
     .container
       = yield
     .footer

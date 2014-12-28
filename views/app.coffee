@@ -28,6 +28,12 @@ $ ->
 
   $(".icon").hover(over, out)
 
+  $(document).on 'mouseenter', '.pic', ->
+    $(this).children('.overlay').fadeIn()
+
+  $(document).on 'mouseleave', '.pic', ->
+    $(this).children('.overlay').fadeOut()
+
   preload = (imgs) ->
     $(imgs).each ->
       $('<img/>')[0].src = this

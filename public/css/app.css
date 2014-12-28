@@ -46,10 +46,7 @@ a.icon img {
   height: 100%;
   color: #FFF;
   background: rgba(0, 0, 0, .6);
-}
-
-.pic:hover .overlay {
-  background: rgba(0, 0, 0, .6);
+  display: none;
 }
 
 .pic .overlay .info {
@@ -67,4 +64,20 @@ a.icon img {
 
 .pic .overlay .info i {
   margin-right: 15px;
+}
+
+.icon-menu i {
+  color: #666;
+  font-size: 28px;
+  margin-top: 1px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.icon-menu i:hover {
+  color: #999;
+}
+
+.top-bar-section ul li {
+  background: none;
 }
