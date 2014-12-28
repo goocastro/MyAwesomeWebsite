@@ -14,7 +14,7 @@ $ ->
 
   $(document).scroll ->
     if $(document).height() - ($(window).scrollTop() + $(window).height()) <= 0
-      $.get('/more', (data) ->
+      $.get('/more?mid=' + $('.pic').last().attr('data-id'), (data) ->
         $("#main").append(data)
         pageTracker._trackPageview('scroll')
       )
@@ -28,10 +28,11 @@ $ ->
 
   $(".icon").hover(over, out)
 
-  $(".profile-picture").twipsy(
-    live:true
-    offset:5
-  )
+  $(document).on 'mouseenter', '.pic', ->
+    $(this).children('.overlay').fadeIn()
+
+  $(document).on 'mouseleave', '.pic', ->
+    $(this).children('.overlay').fadeOut()
 
   preload = (imgs) ->
     $(imgs).each ->

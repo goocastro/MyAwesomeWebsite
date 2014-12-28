@@ -1,0 +1,83 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,700);
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+}
+
+a {
+  font-weight: 200 !important;
+}
+
+a.icon img {
+  width: 30px;
+}
+
+#pics-container {
+  padding-right: 0.9375rem;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+  padding: 6px 0.65rem;
+}
+
+.pic {
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  padding-right: 0;
+}
+
+.pic img {
+  float: left;
+}
+
+.pic .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 0.9375rem;
+  width: 100%;
+  height: 100%;
+  color: #FFF;
+  background: rgba(0, 0, 0, .6);
+  display: none;
+}
+
+.pic .overlay .info {
+  position: relative;
+  height: 50px;
+  width: 75%;
+  top: 50%;
+  margin: -25px auto 0 auto;
+  text-align: center;
+}
+
+.pic .overlay .info p {
+  margin-bottom: 0;
+}
+
+.pic .overlay .info i {
+  margin-right: 15px;
+}
+
+.icon-menu i {
+  color: #666;
+  font-size: 28px;
+  margin-top: 1px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.icon-menu i:hover {
+  color: #999;
+}
+
+.top-bar-section ul li {
+  background: none;
+}

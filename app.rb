@@ -11,11 +11,12 @@ images = []
 offset = 0
 
 get '/' do
-  images = getInstagrams()
-  @images = images
+  images = getInstagrams
+  @images = images['data']
   offset = 0
   @offset = offset
   haml :index
+  #{ :key1 => 'value1', :key2 => 'value2' }.to_json
 end
 
 get '/app.js' do
@@ -23,33 +24,32 @@ get '/app.js' do
 end
 
 get '/more' do
-  offset += 10
-  @images = images
-  @offset = offset
+  @images = getInstagrams(params['mid'])['data']
   haml :_list, :layout => false
 end
 
 ############################################
 ##### get instagram array
 ############################################
-def getInstagrams
-  cache_filename = 'tmp/instagram_cache.yaml'
+def getInstagrams(maxid = '')
+  if maxid == ''
+    cache_filename = 'tmp/instagram_cache.yaml'
+  else
+    cache_filename = "tmp/instagram_cache_#{maxid}.yaml"
+  end
   pic_list = []
 
   if !File.exist?(cache_filename.to_s)
     File.open( cache_filename , 'w') {|f| f.write('') }
   end
 
-  if true
-  #if File.ctime( cache_filename ) - Time.now < -60 || File.size( cache_filename ) < 5
+  #if true
+  if File.ctime( cache_filename ) - Time.now < -30 || File.size( cache_filename ) < 5
     puts "=> getting data from from api"
-    begin
-      client = Instagram.client(:access_token => ENV['AT'])
-    rescue
-      pic_list = []
-    ensure
-      pic_list = client.user_recent_media(:count => 300)
-    end
+    url = "https://api.instagram.com/v1/users/895827/media/recent/?client_id=195fdfcae4844c3b8553e894236f5ada&count=20&max_id=" + maxid
+    p url
+    resp = Net::HTTP.get_response(URI.parse(url))
+    pic_list = JSON.parse(resp.body)
 
     File.open( cache_filename , "w+" ) do |out|
       out << pic_list.to_yaml
