@@ -18,10 +18,38 @@ a.icon img {
   width: 30px;
 }
 
+#pics-container {
+  padding-right: 0.9375rem;
+}
+
 .top-bar-section li:not(.has-form) a:not(.button) {
   padding: 6px 0.65rem;
 }
 
 .pic {
   margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  padding-right: 0;
+}
+
+.pic img {
+  float: left;
+}
+
+.pic .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 0.9375rem;
+  width: 100%;
+  height: 100%;
+  color: #FFF;
+  display: inline;
+  background: rgba(0, 0, 0, .6);
+}
+
+.pic:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, .6);
 }

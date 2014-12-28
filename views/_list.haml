@@ -1,15 +1,17 @@
-- @images.each do |image|
-  -#.small-2.large-4
-    .wella
-      %h2
-        -post_date = DateTime.parse(Time.at(image.created_time.to_i).to_s)
-        ="#{post_date.mday}/#{post_date.mon}"
-      -if image.likes.data.length != 0
-        %p
-          %p(style="margin-bottom:5px;")
-            Likes
-          - for like in image.likes.data
-            %img.profile-picture(src="#{like.profile_picture}" data-original-title="#{like.username}" alt="#{like.username}")
-  .large-3.small-12.medium-6.columns.pic{ "data-id" => image['id'] }
-    =#%img(src="/images/test.jpg")
-    %img.instagram-pic{ :src => image['images']['standard_resolution']['url'], :alt => image['caption'].nil? ? "" : image['caption']['text'] }
+#pics-container
+  - @images.each do |image|
+    -#.small-2.large-4
+      .wella
+        %h2
+          -post_date = DateTime.parse(Time.at(image.created_time.to_i).to_s)
+          ="#{post_date.mday}/#{post_date.mon}"
+        -if image.likes.data.length != 0
+          %p
+            %p(style="margin-bottom:5px;")
+              Likes
+            - for like in image.likes.data
+              %img.profile-picture(src="#{like.profile_picture}" data-original-title="#{like.username}" alt="#{like.username}")
+    .pic.large-3.small-12.medium-6.columns{ "data-id" => image['id'] }
+      %img.instagram-pic{ :src => image['images']['standard_resolution']['url'], :alt => image['caption'].nil? ? "" : image['caption']['text'] }
+      .overlay
+        %p lala
