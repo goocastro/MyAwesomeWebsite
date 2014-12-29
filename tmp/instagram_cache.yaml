@@ -23,7 +23,7 @@ data:
   created_time: '1419455922'
   link: http://instagram.com/p/xARjS2DPLA/
   likes:
-    count: 6
+    count: 7
     data:
     - username: duh138
       profile_picture: https://instagramimages-a.akamaihd.net/profiles/profile_1537697_75sq_1395264690.jpg
@@ -83,7 +83,7 @@ data:
   created_time: '1419451837'
   link: http://instagram.com/p/xAJwnDjPKU/
   likes:
-    count: 9
+    count: 10
     data:
     - username: fabiovieira
       profile_picture: https://instagramimages-a.akamaihd.net/profiles/profile_7219058_75sq_1311875737.jpg
