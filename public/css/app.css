@@ -1,107 +1,18 @@
 body {
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-weight: 200;
   background-color: #222;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-weight: 200;
-}
-
-.top-bar .name h1 a{
-  font-size: 22px;
-}
-
-a {
-  font-weight: 200 !important;
-}
-
-a.icon img {
-  width: 30px;
-}
-
-#pics-container {
-  padding-right: 0.9375rem;
-  margin-top: 25px;
-}
-
-nav.top-bar {
-  -webkit-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
-}
-
-.top-bar-section li:not(.has-form) a:not(.button) {
-  padding: 6px 0.65rem;
-}
-
-.pic {
-  margin-bottom: 20px;
-  position: relative;
-  overflow: hidden;
-  padding-right: 0;
-}
-
-.pic img {
-  float: left;
-}
-
-.pic .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0 0.9375rem;
+.container {
   width: 100%;
-  height: 100%;
-  color: #FFF;
-  background: rgba(0, 0, 0, .6);
-  display: none;
-}
-
-.pic .overlay .info {
-  position: relative;
-  height: 50px;
-  width: 75%;
-  top: 50%;
-  margin: -25px auto 0 auto;
   text-align: center;
 }
 
-.pic .overlay .info p {
-  margin-bottom: 0;
-}
-
-.pic .overlay .info i {
-  margin-right: 15px;
-}
-
-.icon-menu i {
-  color: #666;
-  font-size: 28px;
-  margin-top: 1px;
-  margin-right: 20px;
-  cursor: pointer;
-}
-
-.icon-menu i:hover {
-  color: #999;
-}
-
-.top-bar-section ul li {
-  background: none;
-}
-
-.footer {
-  clear: both;
-  min-height:100px;
-  background-image:url('/images/footer_pattern.png');
-  -moz-box-shadow:inset 0 10px 10px #000000;
-  -webkit-box-shadow:inset 0 10px 10px #000000;
-  box-shadow:inset 0 10px 10px #000000;
-}
-
-.sub-header {
-  min-height:10px;
-  background-image:url('/images/footer_pattern.png');
+img {
+  position: absolute;
+  top: 50%;
+  margin-top: -142px;
+  margin-left: -250px;
+  webkit-box-shadow: 5px 5px 28px -3px rgba(0,0,0,0.46);
+  moz-box-shadow: 5px 5px 28px -3px rgba(0,0,0,0.46);
+  box-shadow: 5px 5px 28px -3px rgba(0,0,0,0.46);
 }
